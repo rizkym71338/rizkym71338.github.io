@@ -27,7 +27,7 @@ const Home = () => {
 
             <div className="h-screen flex justify-center">
               <div className="flex flex-col z-50 justify-between text-gray-200">
-                <div className="flex w-screen flex-col justify-center p-10">
+                <div className="flex w-screen flex-col justify-center pt-10">
                   <div className="w-40 h-40 rounded-full shadow-lg mx-auto">
                     <img className="w-full h-full rounded-full" src={Profile} alt="Rizky Maulana" />
                   </div>
