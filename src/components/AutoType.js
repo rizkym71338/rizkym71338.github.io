@@ -1,12 +1,13 @@
 import React from "react";
+import PropTypes from "prop-types";
 import AutoTyping, { BlinkCursor } from "react-auto-typing";
 
-const AutoType = (props) => {
+const AutoType = ({ text }) => {
   return (
     <>
       <AutoTyping
         active // <boolean>
-        textRef={props.text} // <string>
+        textRef={text} // <string>
         writeSpeed={150} // <number>
         deleteSpeed={150} // <number>
         delayToWrite={1000} // <number>
@@ -18,6 +19,10 @@ const AutoType = (props) => {
       />
     </>
   );
+};
+
+AutoType.propTypes = {
+  text: PropTypes.string,
 };
 
 export default AutoType;

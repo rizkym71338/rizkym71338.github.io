@@ -5,70 +5,80 @@ import Profile from "./assets/img/profile.jpg";
 import AutoType from "./components/AutoType";
 
 function App() {
+  const FamiliarWith = [
+    "HTML.",
+    "CSS.",
+    "Tailwind.",
+    "PHP.",
+    "Laravel.",
+    "Javascript.",
+    "Node js.",
+    "React js.",
+    "React Native.",
+    "Python.",
+  ];
+
   return (
     <>
-      <div className="max-h-screen p-5 flex justify-center items-center">
-        <div className="flex-col justify-between space-y-3 items-center max-w-md w-full h-full p-5 bgGlassLight">
-          <div className="flex flex-col space-y-2 w-full">
-            <div className="h-32 w-32 rounded-full shadow-lg mx-auto border-4 border-blue-500">
+      <div className="flex items-center justify-center max-h-screen p-5">
+        <div className="bgGlassLight flex-col items-center justify-between w-full h-full max-w-md p-5 space-y-3">
+          <div className="flex flex-col w-full space-y-2">
+            <div className="w-32 h-32 mx-auto border-4 border-blue-500 rounded-full shadow-lg">
               <img
                 src={Profile}
                 alt="Rizky Maulana"
                 className="w-full h-full rounded-full"
               />
             </div>
-            <div className="flex flex-col bgGlassDark w-full justify-center items-center text-white p-3">
-              <div className="font-bold text-lg">Rizky Maulana</div>
+            <div className="bgGlassDark flex flex-col items-center justify-center w-full p-3 text-white">
+              <div className="text-lg font-bold">Rizky Maulana</div>
               <div className="font-semibold">
                 <AutoType text="Frontend Developer" />
               </div>
             </div>
-            <div className="flex flex-col bgGlassDark w-full justify-center items-center text-white p-3">
-              <div className="font-bold text-lg">
+            <div className="bgGlassDark flex flex-col items-center justify-center w-full p-3 text-white">
+              <div className="text-lg font-bold">
                 Familiar With{" "}
                 <TextLoop interval={1000}>
-                  <span className="text-blue-500">HTML.</span>
-                  <span className="text-blue-500">CSS.</span>
-                  <span className="text-blue-500">Tailwind.</span>
-                  <span className="text-blue-500">PHP.</span>
-                  <span className="text-blue-500">Laravel.</span>
-                  <span className="text-blue-500">Javascript.</span>
-                  <span className="text-blue-500">Node js.</span>
-                  <span className="text-blue-500">React js.</span>
-                  <span className="text-blue-500">React Native.</span>
-                  <span className="text-blue-500">Python.</span>
+                  {FamiliarWith.map((item, index) => {
+                    return (
+                      <span key={index} className="text-blue-500">
+                        {item}
+                      </span>
+                    );
+                  })}
                 </TextLoop>
               </div>
             </div>
-            <div className="flex flex-row justify-between items-center space-x-2">
+            <div className="flex flex-row items-center justify-between space-x-2">
               <a
                 href="https://www.instagram.com/rzky_mk/"
-                className="flex flex-col btnGlass w-full justify-center items-center text-white p-3"
+                className="btnGlass flex flex-col items-center justify-center w-full p-3 text-white"
               >
                 Instagram
               </a>
               <a
                 href="https://wa.me/6282262600183"
-                className="flex flex-col btnGlass w-full justify-center items-center text-white p-3"
+                className="btnGlass flex flex-col items-center justify-center w-full p-3 text-white"
               >
                 Whatsapp
               </a>
             </div>
             <a
               href="mailto:rizkym71338@gmail.com"
-              className="flex flex-col btnGlass w-full justify-center items-center text-white p-3"
+              className="btnGlass flex flex-col items-center justify-center w-full p-3 text-white"
             >
               Email
             </a>
             <a
               href="https://github.com/rizkym71338"
-              className="flex flex-col btnGlass w-full justify-center items-center text-white p-3"
+              className="btnGlass flex flex-col items-center justify-center w-full p-3 text-white"
             >
               Github
             </a>
             <a
               href="https://www.youtube.com/channel/UCeJVHHqXvpU2i_zVa2QmgPA"
-              className="flex flex-col btnGlass w-full justify-center items-center text-white p-3"
+              className="btnGlass flex flex-col items-center justify-center w-full p-3 text-white"
             >
               Youtube
             </a>
