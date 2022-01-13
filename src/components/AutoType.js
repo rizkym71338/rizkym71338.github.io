@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import AutoTyping, { BlinkCursor } from "react-auto-typing";
+import React from 'react';
+import PropTypes from 'prop-types';
+import AutoTyping, { BlinkCursor } from 'react-auto-typing';
 
-const AutoType = ({ text }) => {
+function AutoType({ text }) {
   return (
     <>
       <AutoTyping
@@ -19,10 +19,14 @@ const AutoType = ({ text }) => {
       />
     </>
   );
-};
+}
 
 AutoType.propTypes = {
   text: PropTypes.string,
+};
+
+AutoType.defaultProps = {
+  text: 'INI TEXT',
 };
 
 export default AutoType;
